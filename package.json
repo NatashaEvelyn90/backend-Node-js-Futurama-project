@@ -1,0 +1,28 @@
+{
+  "name": "backend-node-js-futurama-project",
+  "version": "1.0.0",
+  "description": "This is a Futurama project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NatashaEvelyn90/backend-Node-js-Futurama-project.git"
+  },
+  "keywords": [],
+  "author": "crazpicc",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NatashaEvelyn90/backend-Node-js-Futurama-project/issues"
+  },
+  "homepage": "https://github.com/NatashaEvelyn90/backend-Node-js-Futurama-project#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2"
+  }
+}

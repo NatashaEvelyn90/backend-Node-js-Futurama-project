@@ -1,0 +1,14 @@
+first step is to  run npm init - y
+next is to  create a .gitignore
+node_modules/
+*-lock.json in the gitignore
+
+then run "npm install express node-fetch
+
+then add your app.js file
+
+then add your information in the package.json stuff
+
+npm i ejs to add ejs ( you can check package.json)
+views folder will contain our EJS files and such and templates
+CSS and images will go into the public folders. Anything static will go in there

@@ -1,0 +1,17 @@
+<%- include('../partials/header'); %>
+
+<main class="main" id="main">
+    <h2>Characters</h2>
+    <% data.forEach(item => { %> 
+        <div>
+            <figure>
+                <img src="<%= item.images.main%>" alt="image of <%= item.name.first%>">
+                <figcaption>
+                    <%= item.name.first %> <%= item.name.last %>
+                </figcaption>
+            </figure>
+        </div>
+    <% }) %>
+</main>
+
+<%- include('../partials/footer'); %>
