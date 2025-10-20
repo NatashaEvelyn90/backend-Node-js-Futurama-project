@@ -1,3 +1,5 @@
+//! Handles top level configureation FOR ROUTES 
+
 const express = require('express')
 const router = express.Router()
 
@@ -16,41 +18,16 @@ router.get(`/`, (req, res)=> {
     })
 })
 
-//? http://localhost:3000/characters
-router.get('/characters', (req, res)=> {
+//TODO Add inventory 
+const endpoints = ['characters', 'cast', 'episodes', 'questions']
 
-    // do stuff
-const url = 'https://api.sampleapis.com/futurama/characters'
+// router.use('/characters', require('./api/charactersRoutes'))
+// router.use('/episodes', require('./api/episodesRoutes'))
+// router.use('/cast', require('./api/castRoutes'))
 
-fetch(url)
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
-        res.render('pages/characters', {
-            title: 'Characters',
-            name: 'Our list of characters',
-            data //data: data
-        })
-    })
-})    
-
-//? http://localhost:3000/episodes
-router.get('/episodes', (req, res)=> {
-
-// do stuff
-const url = 'https://api.sampleapis.com/futurama/episodes'
-
-fetch(url)
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
-        res.render('pages/episodes', {
-            title: 'Futurama Episodes',
-            name: 'Good news Everyone! Here are some episodes!',
-            episodes: data
-        })
-    })
-        
+//! This code is used instead of what was used above. This is the simple version
+endpoints.forEach(endpoint => {
+    router.use(`/${endpoint}`, require(`./api/${endpoint}Routes`))
 })
 
 module.exports = router

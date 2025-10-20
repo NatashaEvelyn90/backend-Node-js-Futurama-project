@@ -7,7 +7,9 @@
             <figure>
                 <img src="<%= item.images.main%>" alt="image of <%= item.name.first%>">
                 <figcaption>
-                    <%= item.name.first %> <%= item.name.last %>
+                    <a href="/characters/<%= item.id %>">
+                        <%= item.name.first %> <%= item.name.last %>
+                    </a>
                 </figcaption>
             </figure>
         </div>

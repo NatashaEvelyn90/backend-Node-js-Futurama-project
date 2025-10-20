@@ -4,8 +4,9 @@
     <h2> All the Episodes that you need to watch. The rest are questionable.</h2>
     <section class="section" id="section">
         <% episodes.forEach(episode => { %>
-            <div>
+            <div><a href="/episodes/<%= item.id %>">
                 <h3><%= episode.title %></h3>
+            </a>
                 <ul>
                     <li>Season - Episode: <%= episode.number %></li>
                     <li>Writers: <%= episode.writers %></li>
