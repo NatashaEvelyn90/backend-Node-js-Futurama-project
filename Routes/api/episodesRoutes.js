@@ -1,11 +1,10 @@
-const express= require('express')
-const router = express.Router()
+const router = require('express').Router()
 
 const fetch = (...args)=> import('node-fetch').then(({ default: fetch}) => fetch(...args))
 
 // localhost:3000/episodes
 //? http://localhost:3000/episodes
-router.get('/episodes', (req, res)=> {
+router.get('/', (req, res)=> {
 
 // do stuff
 const url = 'https://api.sampleapis.com/futurama/episodes'
